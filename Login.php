@@ -1,8 +1,8 @@
 <?php
 include("config.php");
 
-$loginPass = mysqli_real_escape_string($db, $_POST['Password']);
-$loginUser = mysqli_real_escape_string($db, $_POST['User']);
+$loginPass = mysqli_real_escape_string($db, $_POST['j_password']);
+$loginUser = mysqli_real_escape_string($db, $_POST['j_username']);
  
 $sql = "SELECT * FROM login WHERE '$loginPass' = pass AND loginid = '$loginUser';";
 
@@ -17,7 +17,7 @@ if($count == 1)
 	$_SESSION["id"] = openssl_random_pseudo_bytes(32);
 	$_SESSION["uName"] = $row["username"];
 	$_SESSION["title"] = $row["title"];
-	header("Location: http://localhost/TestPage.php");
+	header("Location: http://localhost/main.html");
 	die();
 }
 
