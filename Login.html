@@ -4,22 +4,37 @@
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	
+
 	<body>
-		<div id = "frm">
+		<div class="login-onethird">
+			<img src="lakehead_logo.png">
+			<h1>Lakehead University HACKED</h1>	                
 			<form action="Login.php" method="post">
-				<p>
-					<label for="username"><b>Username</b></label>
-					<input type="text" name="User" required />
-				</p>
-				<p>
-					<label for="password"><b>Password</b></label>
-					<input type="password" name="Password" required />
-				</p>
-				<p>
-					<input type="submit" id="loginBtn" value="Submit" />
-				</p>
+				<fieldset>
+					<div class="form-group">
+						<label for="username">Username<span class="form-required" title="This field is required.">*</span></label>
+						<br>
+						<input class="form-control" id="username" name="j_username" type="text" value="" autocapitalize="off">
+				    </div>
+					
+					<div class="form-group">
+						<label for="password">Password<span class="form-required" title="This field is required.">*</span></label>
+						<br>
+						<input class="form-control form-text required" id="password" name="j_password" type="password" value="">
+				    
+					</div>
+						<a href="https://erpwp.lakeheadu.ca/password/forgot"><span class="en">Recover my account</span></a>	
+					<div>
+	        	            
+					<button class="btn btn-lg btn-success btn-block" type="submit" id="loginButton">Login</button>
+	        	
+				</fieldset>
 			</form>
+            
+			<div class="copyright">
+				&#169; 2020 Lakehead University Hacked Edition. All Rights Reserved.		
+			</div>	
 		</div>
+		<div class="login-twothird"></div>
 	</body>
-</html>	
+</html>
