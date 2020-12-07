@@ -6,7 +6,7 @@ if(!isset($_SESSION['id']))
 	header("Location: http://localhost/Login.html");
 }
 
-$userCode = $_POST[''];
+$userCode = $_POST['j_verifyCode'];
 $twoFA = $_SESSION['code'];
 
 if($userCode == $twoFA)

@@ -4,7 +4,7 @@ include("Config.php");
 if(isset($_POST["id"]))
 {
  
- $query = "SELECT * FROM user";
+ $query = "SELECT * FROM userInfo";
  $result = mysqli_query($db, $query);
  $output = '';
  while($row = mysqli_fetch_array($result))
