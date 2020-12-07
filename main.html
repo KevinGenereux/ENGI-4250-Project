@@ -3,16 +3,52 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script>
+		$(document).ready(function(){
+		 
+		 function load_page_details()
+		 {
+		  $.ajax({
+		   url:"main.php",
+		   method:"POST",
+		   data:{id: 1},
+		   success:function(user)
+		   {
+		   console.log("Success")
+			$('#registrationTable').html(user);
+		   }
+		  });
+		 }
+
+		 $('#navigationBar li').click(function(){
+		  load_page_details();
+		 });
+		 
+		});
+		</script>
+
 	</head>
+	
 
 	<body>
-
-	<ul>
-	  <li><a href="#profile">Profile</a></li>
-	  <li><a href="#viewCourses">View Courses</a></li>
-	  <li><a href="#transcript">Transcript</a></li>
-	  <li style="float:right"><a class="active" href="#Logout">Logout</a></li>
-	</ul>
+	
+		<div id="navigationBar">
+			<ul>
+			  <li><a href="#profile" class="profile">Profile</a></li>
+			  <li><a href="#viewCourses" class = "viewcourses">View Courses</a></li>
+			  <li><a href="#transcript">Transcript</a></li>
+			  <li style="float:right"><a class="active" href="#Logout">Logout</a></li>
+			</ul>
+		</div>
+		
+		<div id="test">
+			<h1>Registration<h1>
+			<div id="registrationTable"></div>
+		</div>
+		
 
 	</body>
 </html>
