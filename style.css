@@ -184,3 +184,11 @@ li a:hover:not(.active) {
 		display:none;
 	}
 }
+
+td {
+    color: black;
+}
+
+#profileTable {
+    margin-top: 20px;
+}

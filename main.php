@@ -1,10 +1,13 @@
 <?php
 include("Config.php"); 
 //fetch.php
+session_start();
 if(isset($_POST["id"]))
 {
- 
- $query = "SELECT * FROM userInfo";
+	
+
+ $uName = $_SESSION["uName"];
+ $query = "SELECT * FROM userInfo WHERE username = '$uName';";
  $result = mysqli_query($db, $query);
  $output = '';
  while($row = mysqli_fetch_array($result))
